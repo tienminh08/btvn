@@ -1,0 +1,33 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container mt-3">
+
+  <form action="/update" method="post" >
+    <input type="text" class="form-control form-control-lg" placeholder="Enter employeeCode" name="employeeCode" th:value="${S1.getEmployeeCode()}" >
+    <br>
+    <input type="text" class="form-control mt-3" placeholder="Enter Name" name="name" th:value="${S1.getName()}" >
+    <br>
+    <input type="text" class="form-control form-control-sm mt-3" placeholder="Enter age"  name="age" th:value="${S1.getAge()}" >
+    <br>
+    <input type="text" class="form-control form-control-sm mt-3" placeholder="Enter salary" name="salary" th:value="${S1.getSalary()}">
+
+    <br>
+    <select name="branch">
+      <option value="0">IT</option>
+      <option value="1">Marketing</option>
+      <option value="2">Internship</option>
+    </select>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+</body>
+</html>
